@@ -1,0 +1,33 @@
+{% extends 'todo/base.html' %} {% load static %} {% block header %}
+<link rel="stylesheet" href="{% static 'css/checkbox-css.css' %}">
+<style>
+    
+    .divs{
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px 0;
+    }
+</style>
+
+   
+{% endblock %} {% block content %}
+<div class=" divs d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <h1><b>Donate to Promote the Project</b>
+            
+           
+        </h1>
+        <hr class="border-primary">
+        <ol>
+            <li>Via mpesa: +1234566900</li>
+            <li>Via Credit Card: XXXXXXXXX</li>
+            <li>Via PayPal</li>
+        </ol>
+    </div>
+</div>
+
+    
+    {% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'todo/base.html' %} {% load static %} {% block content %}
+<style>
+    body{
+        background-image: url("{% static 'images/background.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        color: white;
+    }
+    h1{
+        margin-top: 150px;
+        margin-left: 50px;
+        font-size: 50px;
+        color: palevioletred;
+
+    }
+    h4{
+        margin-left: 120px;
+        margin-bottom: 50px;
+        margin-top: -20px;
+    }
+    p{
+        margin-bottom: 195px;
+        font-size: 22px;
+    }
+    
+</style>
+<div class="w-100 h-100 d-flex  justify-content-center align-items-center">
+    <div class='col-md-6'>
+        
+       
+
+            <div class ="main">
+                <h1 class ="headings">NatureMyFlower</h1>
+                <br>
+                <h4><i>Don't cut it water it</i></h4>
+            </div>
+                <p>
+                 In most of the third world countries  FGM is still being practised. Most of the young girls  suffer from post trauma experiences and lack a safe space where they can feel wanted again.<br>
+                 Some of them also loss their lives in the process because they lack fast response and support from their parents.
+                 <br>
+                 <br>
+                  Our main aim is to create a safe space for the victim where they will feel wanted and neeeded. 
+                  It will give them fast access to health care in case such happen and educate the public on it effects.
+                </p>
+            
+            
+            </div>
+            </div>
+
+    </div>
+</div>
+{% endblock %}

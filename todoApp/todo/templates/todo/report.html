@@ -1,0 +1,70 @@
+{% extends 'todo/base.html' %} {% load static %} {% block header %}
+<link rel="stylesheet" href="{% static 'css/checkbox-css.css' %}">
+
+{% endblock %} {% block content %}
+    
+            
+        
+<section id="emergency">
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h2><b>Emergency No:</b>116</h2>
+            <hr class='border-primary'>
+        </div>
+        <hr class='border-primary'>
+    </div>
+    </section>
+    <br>
+
+<section id ="form">
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+        <div class='col-md-6'>
+            <h1>Report Case Here</h1>
+            <hr class='border-primary'>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    Location:
+                    <textarea name="location" id="location" cols="50" rows="1" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    State:
+                    <textarea name="description" id="description" cols="50" rows="1" class="form-control" required>{% if 'description' in todo %}{{todo.description}}{% endif %}</textarea>
+                </div>
+                <div class="form-group">
+                    Description:
+                    <textarea name="description" id="description" cols="50" rows="5" class="form-control" required>{% if 'description' in todo %}{{todo.description}}{% endif %}</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<br>
+<section id="officers" class="">
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h1> Officers to Contact </h1>
+            <hr class="border-primary">
+            {% for student in Officers %}
+           
+            <h4>{{ student.name }}</h4>  
+                <p><b>Email: </b>{{ student.email }}</p>
+                <p><b>Phone: </b>{{ student.phone }}</p>
+                <p><b>Address: </b><i>{{ student.address }}</i></p>
+                <hr class="border-primary">
+                <br>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
+    
+    

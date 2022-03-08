@@ -1,0 +1,24 @@
+{% extends 'todo/base.html' %} {% load static %} {% block header %}
+<link rel="stylesheet" href="{% static 'css/checkbox-css.css' %}">
+<style>
+   
+</style>
+{% endblock %} {% block content %}
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <h1>Counsellors details
+            
+        </h1>
+        <hr class="border-primary">
+        {% for student in Consellors %}
+        <h4><img src="{% static "images/avatar2.png" %}" alt="Avatar" class="logo">{{ student.name }}</h4>  
+            <p>{{ student.email }}</p>
+            <p>{{ student.phone }}</p>
+            <p><i>{{ student.address }}</i></p>
+            <hr class="border-primary">
+            <br>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
